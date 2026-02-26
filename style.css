@@ -1,0 +1,132 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(circle, #fce4ec 0%, #f8bbd0 100%);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    box-shadow: 0 20px 50px rgba(136, 14, 79, 0.3);
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 8px solid #f48fb1;
+}
+
+canvas {
+    display: block;
+    cursor: crosshair;
+}
+
+.ui-overlay {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    z-index: 5;
+}
+
+#instructions {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ad1457;
+    text-shadow: 1px 1px 0px white;
+}
+
+#score-display {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #880e4f;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+
+#btn-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.custom-menu {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid #f06292;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: #ec407a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    pointer-events: auto;
+    box-shadow: 0 4px 0px #ad1457;
+}
+
+button:hover {
+    background-color: #d81b60;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0px #880e4f;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0px 0px #ad1457;
+}
+
+.btn-vanilla {
+    background-color: #fff9c4 !important;
+    color: #5d4037 !important;
+    box-shadow: 0 4px 0px #fbc02d !important;
+}
+
+.btn-chocolate {
+    background-color: #4e342e !important;
+    box-shadow: 0 4px 0px #211613 !important;
+}
+
+.btn-redvelvet {
+    background-color: #b71c1c !important;
+    box-shadow: 0 4px 0px #7f0000 !important;
+}
+
+.hidden {
+    display: none !important;
+}

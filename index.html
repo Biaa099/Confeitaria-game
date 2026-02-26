@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confeitaria Mágica - Premium Edition</title>
+    <!-- Brython Core Scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="brython()">
+
+    <div id="game-container">
+        <!-- UI Elements -->
+        <div class="ui-overlay">
+            <div id="score-display">Score: 0</div>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <!-- Controls & Menus -->
+        <div id="btn-container">
+            <button id="btn-start">Iniciar Confeitaria</button>
+            <button id="btn-oven" class="hidden">Tirar do Forno!</button>
+
+            <!-- Customization Menus -->
+            <div id="flavor-menu" class="custom-menu hidden">
+                <center>
+                    <h3>Escolha o Sabor:</h3>
+                </center>
+                <div class="btn-group">
+                    <button class="btn-flavor btn-vanilla" data-color="#FFF9C4">Baunilha</button>
+                    <button class="btn-flavor btn-chocolate" data-color="#4E342E">Chocolate</button>
+                    <button class="btn-flavor btn-redvelvet" data-color="#B71C1C">Red Velvet</button>
+                </div>
+            </div>
+
+            <div id="frosting-menu" class="custom-menu hidden">
+                <center>
+                    <h3>Escolha a Cobertura:</h3>
+                </center>
+                <div class="btn-group">
+                    <button class="btn-frost" data-type="ganache">Ganache Chocolate</button>
+                    <button class="btn-frost" data-type="icing">Glacê Rosa</button>
+                </div>
+            </div>
+
+            <button id="btn-finish" class="hidden">Finalizar Bolo!</button>
+            <button id="btn-restart" class="hidden">Jogar Novamente</button>
+        </div>
+
+        <div id="instructions">Bem-vindo à Experiência Gourmet!</div>
+    </div>
+
+    <!-- Load Game Logic -->
+    <script type="text/python" src="game.py"></script>
+
+</body>
+
+</html>
